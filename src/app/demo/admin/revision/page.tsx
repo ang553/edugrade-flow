@@ -152,7 +152,7 @@ export default function DemoAdminRevisionPage() {
   );
 
   const baseRows = groupedKeys
-    .map((key) => {
+    .map((key): Omit<ReviewRow, "status" | "observation"> | null => {
       const [groupId, subjectId, teacherId] = key.split("__");
       const group = groupMap.get(groupId);
       const subject = subjectMap.get(subjectId);

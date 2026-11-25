@@ -37,7 +37,7 @@ export function Button({
 }: ButtonProps) {
   const buttonClassName = `inline-flex h-9 items-center justify-center rounded-md px-3 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60 ${variantStyles[variant]} ${className}`;
 
-  if ("href" in props && props.href) {
+  if (props.href !== undefined) {
     const { href, children, ...rest } = props;
 
     return (
